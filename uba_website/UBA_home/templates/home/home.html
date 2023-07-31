@@ -1,14 +1,45 @@
 <!DOCTYPE html>
-<html lang="en-us">
-    <head>
-        <meta charset="utf-8">
-        <title> UBA @ NYU Shanghai  </title>
-
-    </head>
-
-    <body>
-        Undergraduate Business Association @ New York University Shanghai
-        <h1>Home Page</h1>
-        
-    </body>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="../../assets/css/style.css" media="screen" />
+</head>
+<body>
+  <div id="container">
+    <div id="header">
+      <h1>
+        Undergraduate Business Association @ NYU Shanghai
+      </h1>
+    </div>
+    <div id="navigation">
+      <ul>
+        <li><a href="#">Home</a></li>	
+        <li><a href="events/">unset & broken</a></li>
+        <li><a href="unset/">unset</a></li>
+      </ul>
+    </div>
+    <div id="content">
+      <h2>
+        About us:
+      </h2>
+		
+      <p>
+        <table>
+          <tr>
+            <td>
+              <img src="{% static 'assets/imag/logo.png'}" alt = 'logo' align="left" height="20">
+              <img src="{% static 'assets/imag/brand.jpeg'}" alt = 'brand' align="right" height="100">
+            </td>
+            <td>
+              Welcome to UBA @ NYU Shanghai! Check out our EBoard members and out amazing events!
+            </td>
+          </tr>
+        </table>
+      </p>
+    </div>
+    <div id="footer">
+      Author: Michael Kang <div>
+      Copyright @ UBA at NYU Shanghai 
+    </div>
+  </div>
+</body>
 </html>
