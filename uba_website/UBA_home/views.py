@@ -4,11 +4,11 @@ from django.http import HttpResponse
 # Create your views here.
 
 
-def home_view(request):
-    return render(request, 'home/home.html')
+# def home_view(request):
+#     return render(request, 'home/home.html')
 
-def events_view(request):
-    return render(request, 'events/events.html')
+# def events_view(request):
+#     return render(request, 'events/events.html')
 
 
 # def home_view(request):
@@ -17,3 +17,6 @@ def events_view(request):
 # def events_view(request):
 # return HttpResponse("View our past and upcoming events!")
 
+def index(request):
+    return HttpResponse('Now you have seen this request')
+    
