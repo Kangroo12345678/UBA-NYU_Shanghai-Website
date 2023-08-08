@@ -20,7 +20,7 @@ from django.urls import path, include
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('home/', include('UBA_home.urls'))
+    path('UBA_home/', include('UBA_home.urls'))
 ]
 
 #Add URL maps to redirect the base URL to our application
