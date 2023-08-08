@@ -5,7 +5,7 @@ from django.urls import reverse
 # Other imported modules
 
 from django.utils import timezone
-
+import datetime
 
 # Create your models here.
 
@@ -14,7 +14,8 @@ class member(models.Model):
     major = models.CharField(max_length=100)
     age = models.IntegerField()
     role = models.CharField(max_length=50)
-    intro = models.TextField()
+    intro = models.TextField(default='', blank=True)
+    
 
     def __str__(self):
         return self.name
@@ -25,7 +26,7 @@ class event(models.Model):
     FUTURE = 'yet_to_come'
 
     STATE_CHOICES = [
-        (PAST,'done'),
+        (PAST, 'done'),
         (CANCELLED, 'cancelled'),
         (FUTURE, 'yet_to_come')
     ]
