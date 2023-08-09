@@ -1,6 +1,7 @@
 from django.shortcuts import render
 from django.http import HttpResponse
-
+from django.template import loader
+from .models import member, event
 # Create your views here.
 
 
@@ -17,6 +18,12 @@ from django.http import HttpResponse
 # def events_view(request):
 # return HttpResponse("View our past and upcoming events!")
 
+
 def index(request):
-    return HttpResponse('Now you have seen this request')
-    
+    member_list = member.objects.all()
+    output = "----------------------------------".join([str(q) for q in member_list])
+    template = loader.get_template('UBA_home/index.html')
+    context = {
+        'member_list': member_list,
+    }
+    return HttpResponse(template.render(context, request))

@@ -1,0 +1,58 @@
+/* Add this to the top of your styles.css file */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+
+/* Reset default margins and paddings */
+body, h1, h2, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.header {
+    background-color: #267;
+    color: #166;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+.logo {
+    max-width: 100px;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navigation a {
+    color: #166;
+    text-decoration: none;
+}
+
+.main-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.banner {
+    background-color: #002366;
+    color: white;
+    padding: 100px 0;
+}
+
+.banner h1 {
+    font-size: 2.5em;
+}
+
+.members {
+    margin-top: 500px;
+}
+
+
+
+
+

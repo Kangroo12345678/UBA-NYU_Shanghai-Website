@@ -18,7 +18,8 @@ class member(models.Model):
     
 
     def __str__(self):
-        return self.name
+        return f"{self.name} | major: {self.major} | role: {self.role} | introductions: {self.intro} \n \n"
+
 
 class event(models.Model):
     PAST = 'done'
