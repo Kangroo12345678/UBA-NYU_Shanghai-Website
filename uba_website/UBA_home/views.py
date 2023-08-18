@@ -19,11 +19,14 @@ from .models import member, event
 # return HttpResponse("View our past and upcoming events!")
 
 
-def index(request):
+def home(request):
     member_list = member.objects.all()
     output = "----------------------------------".join([str(q) for q in member_list])
-    template = loader.get_template('UBA_home/index.html')
+    template = 'intro.html'
     context = {
         'member_list': member_list,
     }
-    return HttpResponse(template.render(context, request))
+    return render(request, template, context)
+    #HttpResponse(template.render(context, request))
+
+

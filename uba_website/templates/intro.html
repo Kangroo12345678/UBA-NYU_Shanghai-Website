@@ -1,0 +1,29 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--- <link rel="stylesheet" href="{% static 'UBA_home/styles.css' %}?version=1"> --->
+    <title>{% block title %}UBA @ NYU Shanghai{% endblock %}</title>
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <nav class="navigation">
+                <ul class="navbar">
+                    <li><a href="{% url 'UBA_home:home' %}">Home</a></li>
+                    <li><a href = #>About Us</a></li>
+                    <li><a href = #>Events</a></li>
+                    <li><a href = #>Publication</a></li>
+                    <li><a href = #>Contact Us!</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="main-content">
+            {% include 'main.html' %}
+        </div>
+    </div>
+</body>
+</html>
+
