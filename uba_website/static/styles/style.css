@@ -1,0 +1,113 @@
+/* Add this to the top of your styles.css file */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+
+
+/* Reset default margins and paddings */
+body, h1, h2, ul {
+    margin: 0;
+    padding: 0;
+}
+
+.body {
+    
+    background-attachment: fixed;
+    background-repeat: no-repeat;
+    color: blanchedalmond;
+    
+
+}
+    
+    
+.header {
+    
+    background-color: rgb(34, 58, 119);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+}
+
+
+.logo-title {
+    width: 50px;
+    height: 50px;
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    gap: 20px;
+}
+
+.navigation a {
+    color: rgb(248, 245, 248);
+    text-decoration: none;
+}
+
+.navbar {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+}
+
+.navbar li {
+    margin-right: 20px;
+}
+
+.navbar li:last-child {
+    margin-right: 0;
+}
+.main-content {
+    text-align: center;
+    padding: 20px;
+}
+
+.banner { 
+    background-image: url("https://w7.pngwing.com/pngs/977/843/png-transparent-shanghai-skyline-illustration-colorful-shanghai-city-building-silhouettes-color-splash-animals-building.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    opacity: 0.8;
+    padding: 250px;
+    clip-path: ellipse(71% 55% at 51% 55%);
+} 
+
+.banner h1 {
+    color: rgb(0, 45, 199);
+    text-shadow: 4px 4px 4px rgba(238, 11, 11, 0.979);
+
+}
+
+.members {
+    margin-top: 50px;
+    background-image: url('https://images.unsplash.com/photo-1591825495543-981fa4410313?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2008&q=80');
+    background-size: cover;
+    clip-path: polygon(0 0, 100% 0, 100% 20%, 86% 75%, 80% 100%, 20% 100%, 15% 80%, 0% 20%);
+    padding:200px
+
+}
+ .members ul{
+    color: aliceblue;
+ }
+
+ .events{
+    background-color: aliceblue;
+    padding: 200px;
+ }
+.project{
+    background-color: rgb(255, 0, 238);
+    padding: 200px;
+
+}
+
+.fun{
+    background-color: rgb(145, 255, 0);
+    padding: 200px;
+}
+
+.contact{
+    background-color: rgb(0, 255, 255);
+    padding: 200px;
+}
