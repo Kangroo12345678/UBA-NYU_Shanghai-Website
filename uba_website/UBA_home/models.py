@@ -18,7 +18,7 @@ class member(models.Model):
     
 
     def __str__(self):
-        return f"{self.name} | major: {self.major} | role: {self.role} | introductions: {self.intro} \n \n"
+        return f"{self.name}  |  {self.role} | "
 
 
 class event(models.Model):

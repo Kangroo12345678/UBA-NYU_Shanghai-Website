@@ -1,15 +1,20 @@
+{% load static %}
+
 <div class="banner">
     <h1>Undergraduate Business Association @ NYU Shanghai</h1>
 </div>
 
 <div class="members">
     <h1>Our Team</h1>
-    <p>
-        General Members
-    </p>
-    <p>
-        Honors Group/Active Participants
-    </p>
+    <h3>
+        50+ General Members
+    </h3>
+    <h3>
+        Selective Honors Group/Active Participants
+    </h3>
+</div>
+
+<div class="Eboard">
     <h2>
         Executive Board
     </h2>
@@ -17,7 +22,10 @@
     {% if member_list %}
     <ul>
         {% for member in member_list %}
-        <li><a href="/UBA_home/{{ member.name }}/">{{ member }}</a></li>
+        <div class = {{member.name}} >
+            <img id="photo"|add:member.name src="{%static 'images/members/'|add:member.name|add:'.png'%}" alt="{{member.name}}'s photo">
+            {{member.role}} : {{member.name}}   
+        </div>
         {% endfor %}
     </ul>
     {% else %}
@@ -25,6 +33,7 @@
     {% endif %}
     <!-- Add code here to display member images and names -->
 </div>
+
 
 <div class="events">
     <h2>Our Events</h2>

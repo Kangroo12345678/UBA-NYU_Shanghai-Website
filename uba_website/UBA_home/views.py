@@ -23,6 +23,29 @@ def home(request):
     member_list = member.objects.all()
     output = "----------------------------------".join([str(q) for q in member_list])
     template = 'intro.html'
+    new = []
+
+    for mem in member_list:
+        if mem.role == 'President':
+            new.append(mem)
+
+    for mem in member_list:
+        if new != [] and mem.role == 'Vice President':
+            new.append(mem)
+    for mem in member_list:
+        if 'Director' in mem.role:
+            new.append(mem)
+
+    for mem in member_list:
+        if 'Treasure' in mem.role:
+            new.append(mem)
+
+#""" I have to admit that this is not good code. It is meant to make the system automatically generate the list of executive members in the right 
+#sequence to show on the website"""
+
+
+    member_list = new
+
     context = {
         'member_list': member_list,
     }
