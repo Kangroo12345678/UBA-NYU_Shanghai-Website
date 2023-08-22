@@ -95,6 +95,26 @@ body, h1, h2, ul {
     
  }
 
+ .member{
+    background-color: antiquewhite;
+ }
+
+
+.photo{
+    height: 150px; 
+    width: 150px;
+    padding: 10px;
+    clip-path: ellipse(50% 48% at 50% 50%);
+    text-align: center;
+}
+
+
+
+
+
+
+
+
 
  .events{
     background-color: aliceblue;
