@@ -32,8 +32,6 @@ class event(models.Model):
         (FUTURE, 'yet_to_come')
     ]
 
-
-
     state = models.CharField(max_length=20, choices=STATE_CHOICES, default = FUTURE)
     title = models.CharField(max_length=200)
     date = models.DateTimeField()

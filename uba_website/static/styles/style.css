@@ -9,23 +9,34 @@ body, h1, h2, ul {
     padding: 0;
 }
 
-.body {
-    
+/* Set the background image on the body element */
+body {
+    background-image: url("../images/shc-night.png");
+    background-size: contain; /* or "contain" depending on your preference */
     background-attachment: fixed;
-    background-repeat: no-repeat;
-    color: blanchedalmond;
-    
-
+    background-blend-mode: multiply;
 }
+
+/* Add a container to wrap around your content */
+.container {
+    position: relative;
+    padding: 0; /* Adjust this padding according to your design */
+    margin: 0 auto;
+    max-width: 1200px; /* Adjust this width according to your design */
+    background-color: rgba(255, 255, 255, 0.9); /* Background color for the "paper" */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Shadow for the "paper" */
+    opacity: 0.8;
+}
+
     
     
 .header {
-    
     background-color: rgb(34, 58, 119);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 10px 20px;
+
 }
 
 
@@ -69,9 +80,10 @@ body, h1, h2, ul {
     background-image: url("../images/shc.png");
     background-repeat: no-repeat;
     background-size: cover;
-    opacity: 0.8;
+    opacity: 1;
     padding: 250px;
     clip-path: ellipse(71% 55% at 51% 55%);
+
 } 
 
 .banner h1 {
@@ -85,41 +97,59 @@ body, h1, h2, ul {
     background-image: url('../images/shanghai.png');
     background-size: cover;
     clip-path: ellipse(50% 48% at 50% 50%);
-    padding:200px
+    padding:200px;
+    opacity: 1;
 
 }
- .Eboard{
+.Eboard {
     color: rgb(1, 9, 16);
-    list-style: none;
-    display: flexbox;
-    
- }
-
- .member{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Add spacing between members */
+    justify-content: center; /* Center the content horizontally */
+}
+#title{
+    text-align: center;
+}
+.member_list{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    display:flex; /*this bottered me for quite some time */
+}
+.member {
     background-color: antiquewhite;
- }
-
-
-.photo{
-    height: 150px; 
-    width: 150px;
-    padding: 10px;
-    clip-path: ellipse(50% 48% at 50% 50%);
+    width: calc(25% - 20px); /* Four members per row with spacing */
+    padding: 3px;
+    box-sizing: border-box;
     text-align: center;
 }
 
+.photo {
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+    padding: 10px;
+    clip-path: ellipse(50% 48% at 50% 50%);
+}
 
 
 
 
 
 
-
-
- .events{
+.events {
     background-color: aliceblue;
-    padding: 200px;
- }
+    padding: 50px;
+    flex-decoration: column;
+    align-items: flex-start;
+}
+
+.skew-left {
+    text-align:  left;
+}
+
 .project{
     background-color: rgb(255, 0, 238);
     padding: 200px;

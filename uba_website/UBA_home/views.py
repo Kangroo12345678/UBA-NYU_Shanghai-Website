@@ -46,8 +46,11 @@ def home(request):
 
     member_list = new
 
+    event_list = event.objects.all()
+
     context = {
         'member_list': member_list,
+        'event_list': event_list
     }
     return render(request, template, context)
     #HttpResponse(template.render(context, request))

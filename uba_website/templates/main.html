@@ -12,21 +12,28 @@
     <h3>
         Selective Honors Group/Active Participants
     </h3>
+    <h3>
+        Founded in 2013 in Shanghai
+    </h3>
+    <h3>
+        In Shanghai and NYC
+    </h3>
 </div>
 
 <div class="Eboard">
-    <h2>
-        Executive Board
-    </h2>
-
+    <p id = "title">
+        <h2>Executive Board</h2>      
+    </p>
+    
     {% if member_list %}
-    <ul>
+<div>
+    <ul class = "member_list">
         {% for member in member_list %}
-        <li>
-            <div class="member" id="{{ member.name }}">
+        <li class="member" id="{{ member.name }}">
+            
                 <img class="photo" src="{% static 'images/members/'|add:member.name|add:'.png' %}" alt="{{ member.name }}'s photo">
                 <p>{{ member.role }}: {{ member.name }}</p>   
-            </div>
+            
         </li>
         {% endfor %}
     </ul>
@@ -34,12 +41,25 @@
     <p>No members are available.</p>
     {% endif %}
     <!-- Add code here to display member images and names -->
+    
+</div>
 </div>
 
 
 
 <div class="events">
-    <h2>Our Events</h2>
+    <h1 class = "skew-left">Our Events</h1>
+    <h4 class = "skew-left">
+        Weekly held events [speaker series, company visits, collaboration projects, networking, competitions, business workshops & research publications etc.]
+    </h4>
+    <div class = "events_config">
+    {%if event_list%} 
+        {%for event in event_list%} 
+    <div id = "{{ event.title }}">
+        
+    </div>
+    </div>
+    </div>
 </div>
 
 <div class="project">
