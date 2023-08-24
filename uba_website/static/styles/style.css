@@ -170,10 +170,13 @@ body {
 }
 .event{
     height: 350px;
-    width: 350px;
+    width: 400px;
     padding: 50px;
+    background-image: url("../images/event.png");
+    background-size: cover;
     background-clip: border-box;
-    box-shadow: 3px 3px 3px rgb(71, 26, 219);
+    box-shadow: 7px 7px 7px rgb(4, 0, 7);
+    
     
     
 }
