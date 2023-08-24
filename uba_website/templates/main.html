@@ -45,24 +45,24 @@
     </div>
     
     {% if member_list %}
-<div class = "Eboard">
-    <ul class = "member_list">
-        {% for member in member_list %}
-        <li class="member" id="{{ member.name }}">
-            
+        
+    <div class="Eboard">
+        <ul class="member_list">
+            {% for member in member_list %}
+            <li class="member" id="{{ member.name }}">
                 <img class="photo" src="{% static 'images/members/'|add:member.name|add:'.png' %}" alt="{{ member.name }}'s photo">
-                <p>{{ member.role }}: {{ member.name }}</p>   
-            
-        </li>
-        {% endfor %}
-    </ul>
-    {% else %}
-    <p>No members are available.</p>
-    {% endif %}
-    <!-- Add code here to display member images and names -->
+                <p>{{ member.role }}: {{ member.name }}</p>
+                <!-- Introduction Box -->
+                <div class="intro-box">
+                    <!-- Introduction content goes here -->
+                </div>
+            </li>
+            {% endfor %}
+        </ul>
+    </div>
     
-</div>
-</div>
+    {% endif %}
+    
 
 
 
