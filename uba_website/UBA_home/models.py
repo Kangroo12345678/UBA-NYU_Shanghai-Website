@@ -32,7 +32,17 @@ class event(models.Model):
         (FUTURE, 'yet_to_come')
     ]
 
+    WORKSHOP = 'WORKSHOP'
+    GENERAL = 'GENERAL'
+    SPEAKER_SERIES = 'SPEAKER_SERIES'
+
+    CATEGORY_CHOICES = [
+        (WORKSHOP, 'WORKSHOP'),
+        (GENERAL, 'GENERAL'),
+        (SPEAKER_SERIES, 'SPEAKER_SERIES')
+    ]
     state = models.CharField(max_length=20, choices=STATE_CHOICES, default = FUTURE)
+    category = models.CharField(max_length=100, choices=CATEGORY_CHOICES, default = GENERAL)
     title = models.CharField(max_length=200)
     date = models.DateTimeField()
     time_to_go = models.DurationField(null = True, blank = True)

@@ -5,19 +5,34 @@
 </div>
 
 <div class="members">
-    <h1>Our Team</h1>
-    <h3>
-        70+ General Members
-    </h3>
-    <h3>
-        Selective Honors Group/Active Participants
-    </h3>
-    <h3>
-        Founded in 2013 in Shanghai
-    </h3>
-    <h3>
-        In Shanghai and NYC
-    </h3>
+    <h1>Our Team & Our Mission</h1>
+    <p>
+        The mission of the Undergraduate Business Association (UBA) is to nurture competent, innovative, and thoughtful business leaders throughout the discovery of career pathways, development of professional skills, and dedication to global impact. 
+
+    </p>
+    <div class="whatisinfo">
+        <div>
+        <h5>General Members</h5>
+        <h3>70+</h3>
+        </div>
+        
+        <div>
+        <h5>Locations</h5>
+        <h3>
+            Shanghai & NYC
+        </h3>
+        </div>
+        
+        <div>
+        <h5>
+            Founded in 
+        </h5>
+        <h3>
+            2013
+        </h3>
+        </div>
+    </div>
+    
 </div>
 
 <div class="Eboard">
@@ -55,14 +70,26 @@
     <div class = "events_config">
     {%if event_list%} 
         {%for event in event_list%} 
-    <div id = "{{ event.title }}">
-        
+    <div class = "event" id = "{{ event.title }}">
+        <p id = "events_config_1">
+            {{ event.category }}
+        </p>
+        <p id = "events_config_2">
+            {{ event.title }} - {{ event.date}}
+        </p>
+        {% endfor %}
+    {% else %}
+    <p>
+        No events available to display
+    </p>
+    {% endif %}
+
     </div>
     </div>
     </div>
 </div>
 
-<div class="project">
+<!-- <div class="project">
     <h2>View Our Projects Here!</h2>
 </div>
 
@@ -71,10 +98,15 @@
         <h2>Member board point system</h2>
         <a>Link to our member point system</a>
     </div>
-</div>
+</div> -->
 
 <div class="contact">
-    <h1>Contact Us!</h1>
+    <h1>LET'S WORK TOGETHER</h1>
+    <div class = "emailus">
+        <a href = "#">
+            EMAIL US
+        </a>
+    </div>
 </div>
 
 

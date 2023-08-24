@@ -11,8 +11,8 @@ body, h1, h2, ul {
 
 /* Set the background image on the body element */
 body {
-    background-image: url("../images/shc-night.png");
-    background-size: contain; /* or "contain" depending on your preference */
+    background-image: url("../images/shc.png");
+    background-size: cover; /* or "contain" depending on your preference */
     background-attachment: fixed;
     background-blend-mode: multiply;
 }
@@ -22,10 +22,10 @@ body {
     position: relative;
     padding: 0; /* Adjust this padding according to your design */
     margin: 0 auto;
-    max-width: 1200px; /* Adjust this width according to your design */
+    max-width: 1400px; /* Adjust this width according to your design */
     background-color: rgba(255, 255, 255, 0.9); /* Background color for the "paper" */
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.2); /* Shadow for the "paper" */
-    opacity: 0.8;
+    opacity: 0.9;
 }
 
     
@@ -54,6 +54,14 @@ body {
 .navigation a {
     color: rgb(248, 245, 248);
     text-decoration: none;
+    position: relative;
+    transition: transform 0.3s, color 0.3s, font-size 0.3s; /* Add transform and font-size transitions */
+}
+
+.navigation a:hover {
+    color:rgb(248, 247, 250);
+    transform: scale(1.1) translateY(-5px); /* Apply scale and translateY on hover */
+    font-size: 1.1em; /* Increase font size on hover */
 }
 
 .navbar {
@@ -71,6 +79,8 @@ body {
 .navbar li:last-child {
     margin-right: 0;
 }
+
+
 .main-content {
     text-align: center;
     padding: 20px;
@@ -81,26 +91,31 @@ body {
     background-repeat: no-repeat;
     background-size: cover;
     opacity: 1;
-    padding: 250px;
-    clip-path: ellipse(71% 55% at 51% 55%);
+    padding: 200px;
+    
 
 } 
 
 .banner h1 {
-    color: rgb(0, 45, 199);
-    text-shadow: 4px 4px 4px rgba(238, 11, 11, 0.979);
+    color: rgb(238, 241, 247);
+    /*text-shadow: 4px 4px 4px rgba(238, 11, 11, 0.979);*/
 
 }
 
 .members {
     margin-top: 70px;
-    background-image: url('../images/shanghai.png');
+    background-color: rgb(34, 58, 119);
     background-size: cover;
-    clip-path: ellipse(50% 48% at 50% 50%);
-    padding:200px;
+    padding: 100px;
     opacity: 1;
 
 }
+
+.whatisinfo{
+    display: flex;
+    gap: 230px
+}
+
 .Eboard {
     color: rgb(1, 9, 16);
     display: flex;
@@ -150,7 +165,19 @@ body {
     text-align:  left;
 }
 
-.project{
+.events_config{
+    display: flex;
+}
+.event{
+    height: 350px;
+    width: 350px;
+    padding: 50px;
+    background-clip: border-box;
+    box-shadow: 3px 3px 3px rgb(71, 26, 219);
+    
+    
+}
+/* .project{
     background-color: rgb(255, 0, 238);
     padding: 200px;
 
@@ -159,9 +186,18 @@ body {
 .fun{
     background-color: rgb(145, 255, 0);
     padding: 200px;
-}
+} */
 
 .contact{
     background-color: rgb(0, 255, 255);
     padding: 200px;
+}
+.emailus{
+    padding: 50px;
+    background-color: rgb(12, 18, 206);
+    background-clip: border-box;
+    box-shadow: 10px 10px 10px rgb(243, 242, 247);
+}
+.emailus a{
+    color: azure;
 }
