@@ -35,13 +35,17 @@
     
 </div>
 
-<div class="Eboard">
-    <p id = "title">
-        <h2>Executive Board</h2>      
-    </p>
+<div class="eboard-general">
+    <div id = "title">
+        OUR TEAM      
+    </div>
+
+    <div id = "eboard-lead">
+        About us and what we do.
+    </div>
     
     {% if member_list %}
-<div>
+<div class = "Eboard">
     <ul class = "member_list">
         {% for member in member_list %}
         <li class="member" id="{{ member.name }}">

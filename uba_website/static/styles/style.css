@@ -116,6 +116,13 @@ body {
     gap: 230px
 }
 
+#title #eboard-lead {
+    justify-content: left;
+    padding: 40px;
+
+
+}
+
 .Eboard {
     color: rgb(1, 9, 16);
     display: flex;
@@ -123,20 +130,18 @@ body {
     gap: 20px; /* Add spacing between members */
     justify-content: center; /* Center the content horizontally */
 }
-#title{
-    text-align: center;
-}
+
 .member_list{
     list-style-type: none;
-    margin: 0;
-    padding: 0;
+    margin: 2px;
+    padding: 10px;
     box-sizing: border-box;
     display:flex; /*this bottered me for quite some time */
 }
 .member {
     background-color: antiquewhite;
     width: calc(25% - 20px); /* Four members per row with spacing */
-    padding: 3px;
+    padding: 10px;
     box-sizing: border-box;
     text-align: center;
 }
