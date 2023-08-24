@@ -206,18 +206,22 @@ body {
 .events {
     background-color: aliceblue;
     padding: 50px;
-    flex-decoration: column;
+    flex-direction: column;
     align-items: flex-start;
 }
 
 .skew-left {
-    text-align:  left;
+    text-align: left;
+    margin-left: 90px;
 }
 
-.events_config{
+.events_config {
     display: flex;
+    flex-wrap: wrap;
 }
-.event{
+
+.event {
+    position: relative; /* Position relative for absolute positioning of overlay */
     height: 350px;
     width: 400px;
     padding: 50px;
@@ -225,10 +229,29 @@ body {
     background-size: cover;
     background-clip: border-box;
     box-shadow: 7px 7px 7px rgb(4, 0, 7);
-    
-    
-    
+    transition: box-shadow 0.3s ease-in-out;
 }
+
+.event:hover {
+    box-shadow: none; /* Remove shadow on hover */
+}
+
+.event-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 10px;
+    transform: scaleY(0.9);
+    transform-origin: bottom; /* Set transform origin to bottom for scaling effect */
+    transition: transform 0.3s ease-in-out;
+}
+
+.event:hover .event-overlay {
+    transform: scaleY(1.2); /* Scale up the overlay on hover */
+}
+
 /* .project{
     background-color: rgb(255, 0, 238);
     padding: 200px;
@@ -241,15 +264,24 @@ body {
 } */
 
 .contact{
-    background-color: rgb(0, 255, 255);
-    padding: 200px;
+    background-image: url("../images/mail.png");
+    background-size:cover;
+    padding: 100px;
 }
 .emailus{
-    padding: 50px;
-    background-color: rgb(12, 18, 206);
-    background-clip: border-box;
+    padding: 30px;
+    background-color: rgb(34, 58, 119);
     box-shadow: 10px 10px 10px rgb(243, 242, 247);
 }
 .emailus a{
     color: azure;
+}
+.brand{
+    size: 20px;
+}
+
+.footer{
+    background-color: rgb(34,58,119);
+    display: flex;
+
 }

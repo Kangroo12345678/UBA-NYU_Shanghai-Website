@@ -66,32 +66,28 @@
 
 
 
-<div class="events">
-    <h1 class = "skew-left">Our Events</h1>
-    <h4 class = "skew-left">
-        Weekly held events [speaker series, company visits, collaboration projects, networking, competitions, business workshops & research publications etc.]
-    </h4>
-    <div class = "events_config">
-    {%if event_list%} 
-        {%for event in event_list%} 
-    <div class = "event" id = "{{ event.title }}">
-        <p id = "events_config_1">
-            {{ event.category }}
-        </p>
-        <p id = "events_config_2">
-            {{ event.title }} - {{ event.date}}
-        </p>
-        {% endfor %}
-    {% else %}
-    <p>
-        No events available to display
-    </p>
-    {% endif %}
-
+    <div class="events">
+        <h1 class="skew-left">OUR EVENTS</h1>
+        <h4 class="skew-left">Weekly Held Events</h4>
+        <h4 class="skew-left">Future Events</h4>
+        <div class="events_config">
+            {% if event_list %}
+            {% for event in event_list %}
+            <div class="event" id="{{ event.title }}">
+                <!-- Event Photo -->
+                <div class="event-overlay">
+                    <p id="events_config_1">{{ event.category }}</p>
+                    <p id="events_config_2">{{ event.title }} - {{ event.date }}</p>
+                </div>
+            </div>
+            {% endfor %}
+            {% else %}
+            <p>No events available to display</p>
+            {% endif %}
+        </div>
+        <h4 class="skew-left">Past Events</h4>
     </div>
-    </div>
-    </div>
-</div>
+    
 
 <!-- <div class="project">
     <h2>View Our Projects Here!</h2>
@@ -105,14 +101,31 @@
 </div> -->
 
 <div class="contact">
-    <h1>LET'S WORK TOGETHER</h1>
+    <p id = "para">Contact Us</p>
+    <p id = "email">
+        @ fb.ubanyush@gmail.com
+    </p>
     <div class = "emailus">
         <a href = "#">
-            EMAIL US
+            SEND US A MESSAGE
         </a>
     </div>
 </div>
 
+<div class="footer">
+ <!---
+    <div class="location">
+        Location: New Bund Campus, 567 West Yangsi Road, Pudong New District, Shanghai, China 
+    </div>
+
+    <div class="contact-info">
+        Contact Info
+    </div>
+
+    <div class="copyright">
+        Copyright 2023 - All Rights Reserved by UBA NYU Shanghai
+    </div>
+</div>-->   
 
   
 
