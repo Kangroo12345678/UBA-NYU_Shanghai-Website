@@ -5,3 +5,4 @@ django-cors-headers==4.2.0
 sqlparse==0.4.4
 typing_extensions==4.7.1
 gunicorn==19.7.1
+whitenoise
