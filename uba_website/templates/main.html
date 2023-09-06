@@ -65,13 +65,23 @@
     
 
 
+    <div id = "events_link">
 
+    </div>
     <div class="events">
         <h1 class="skew-left">OUR EVENTS</h1>
         <h4 class="skew-left">Weekly Held Events</h4>
+        <div class = 'skew-left'>
+            Coming soon!
+        </div>
+
         <h4 class="skew-left">Future Events</h4>
+        <div class = 'skew-left'>Coming soon!</div>
         <div class="events_config">
-            {% if event_list %}
+            
+        </div>
+        <h4 class="skew-left">Past Events</h4>
+        {% if event_list %}
             {% for event in event_list %}
             <div class="event" id="{{ event.title }}">
                 <!-- Event Photo -->
@@ -84,8 +94,6 @@
             {% else %}
             <p>No events available to display</p>
             {% endif %}
-        </div>
-        <h4 class="skew-left">Past Events</h4>
     </div>
     
 
@@ -100,10 +108,18 @@
     </div>
 </div> -->
 
+
+<div id = "contact_link"></div>
 <div class="contact">
     <p id = "para">Contact Us</p>
     <p id = "email">
-        @ fb.ubanyush@gmail.com
+        @  <a href = '../email'>Email</a>
+    <p id = 'email'>
+        @ <a href = 'https://www.instagram.com/uba.nyush '>Instagram</a>
+    </p>
+    <p id = 'email'>
+        @ <a href = 'https://www.linkedin.com/company/uba-nyush/ '>Linkedin</a>
+    </p>
     </p>
     <div class = "emailus">
         <a href = "#">
