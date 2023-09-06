@@ -4,6 +4,6 @@ pip install -r deps.txt
 
 
 # static files
-python manage.py collectstatic --no-input
+python manage.py collectstatic 
 # Run migrations
 python manage.py migrate
