@@ -133,7 +133,7 @@ STATICFILES_DIRS = [
     BASE_DIR/'static',
 ]
 PROJECT_ROOT = os.path.dirname(os.path.abspath(__file__))
-STATTIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
+STATIC_ROOT = os.path.join(PROJECT_ROOT, 'static')
 
 
 # Default primary key field type
