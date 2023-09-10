@@ -4,12 +4,13 @@
     <h1>Undergraduate Business Association @ NYU Shanghai</h1>
 </div>
 
-<div class="members">
+<div class="mission">
     <h1>Our Mission</h1>
     <p>
         "The mission of the Undergraduate Business Association (UBA) is to nurture competent, innovative, and thoughtful business leaders throughout the discovery of career pathways, development of professional skills, and dedication to global impact." 
 
     </p>
+
     <div class="whatisinfo">
         <div>
         <h5>General Members</h5>
@@ -35,6 +36,8 @@
     
 </div>
 
+<div id = '-about_us'></div>
+
 <div class="eboard-general">
     <div id = "title">
         OUR TEAM      
@@ -55,6 +58,9 @@
                 <!-- Introduction Box -->
                 <div class="intro-box">
                     <!-- Introduction content goes here -->
+                    <p>
+                        {{ member.intro }}
+                    </p>
                 </div>
             </li>
             {% endfor %}
@@ -65,37 +71,41 @@
     
 
 
-    <div id = "events_link">
+    <div id = "-events">
 
     </div>
     <div class="events">
         <h1 class="skew-left">OUR EVENTS</h1>
-        <h4 class="skew-left">Weekly Held Events</h4>
+        <h4 class="skew-left">Weekly Held Workshops, Speaker Series, Competitions & Company Collaborations</h4>
         <div class = 'skew-left'>
-            Coming soon!
+            <div class = 'weekly-held-events'>
+                
+            </div>
         </div>
 
-        <h4 class="skew-left">Future Events</h4>
-        <div class = 'skew-left'>Coming soon!</div>
-        <div class="events_config">
-            
-        </div>
-        <h4 class="skew-left">Past Events</h4>
-        {% if event_list %}
-            {% for event in event_list %}
+
+
+<div class="events_config">
+
+{% if event_list %}
+    {% for event in event_list %}
+        {% if event.status == PAST %} <!-- Use lowercase "done" -->
             <div class="event" id="{{ event.title }}">
                 <!-- Event Photo -->
+                <div class="photo-event">
+                    <!--<img src="{% static 'images/'|add:event.title|add:'.jpeg' %}" alt="Event Photo">--->
+                </div>
                 <div class="event-overlay">
                     <p id="events_config_1">{{ event.category }}</p>
                     <p id="events_config_2">{{ event.title }} - {{ event.date }}</p>
                 </div>
             </div>
-            {% endfor %}
-            {% else %}
-            <p>No events available to display</p>
-            {% endif %}
-    </div>
-    
+        {% endif %}
+    {% endfor %}
+{% else %}
+<p>No events available to display</p>
+{% endif %}
+</div>
 
 <!-- <div class="project">
     <h2>View Our Projects Here!</h2>
@@ -108,23 +118,28 @@
     </div>
 </div> -->
 
+<div class = "notice">
+    <img src="{% static 'images/brochure2.png'%}" alt="Timeline-image" width="1100px"> 
+    <img src="{% static 'images/brochure1.png'%}" alt="Timeline-image" width="1100px">
+    
 
-<div id = "contact_link"></div>
+</div>
+
+<!---<div id = "-contact_us"></div>
 <div class="contact">
     <p id = "para">Contact Us</p>
-    <p id = "email">
-        @  <a href = '../email'>Email</a>
+
     <p id = 'email'>
         @ <a href = 'https://www.instagram.com/uba.nyush '>Instagram</a>
     </p>
     <p id = 'email'>
         @ <a href = 'https://www.linkedin.com/company/uba-nyush/ '>Linkedin</a>
     </p>
-    </p>
+    
     <div class = "emailus">
-        <a href = "#">
-            SEND US A MESSAGE
-        </a>
+        
+            SEND US A MESSAGE: @ fb.ubanyush@gmail.com
+        
     </div>
 </div>
 
@@ -146,7 +161,10 @@
   
 
 
-
+<div class = 'footnote'>
+    <img id = footer-logo src="{% static 'images/logo.png'%}" alt="logo" width = 50px>
+    <p>@ Undergraduate Business Association · NYU Shanghai · 2023-2024</p>
+</div>
 
   
 

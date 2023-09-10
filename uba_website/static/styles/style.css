@@ -1,7 +1,9 @@
 /* Add this to the top of your styles.css file */
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
 
-
+html{
+    scroll-behavior: smooth;
+}
 
 /* Reset default margins and paddings */
 body, h1, h2, ul {
@@ -102,7 +104,7 @@ body {
 
 }
 
-.members {
+.mission {
     margin-top: 70px;
     background-color: rgb(34, 58, 119);
     background-size: cover;
@@ -116,6 +118,25 @@ body {
     gap: 300px
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.eboard-general{
+    /* Navigating to our team part on the web page. */
+}
+
+
 #title {
     text-align: left;
     justify-content: left;
@@ -123,6 +144,7 @@ body {
     margin-top: 90px;
     margin-left: 95px;
 }
+
 #eboard-lead {
     text-align: left;
     justify-content: left;
@@ -130,6 +152,7 @@ body {
     margin-top: 20px;
     margin-left: 95px;
 }
+
 .Eboard {
     margin-top: 0px;
     color: rgb(0, 0, 0);
@@ -169,11 +192,11 @@ body {
 .intro-box {
     display: none; /* Initially hidden */
     position: absolute;
-    top: 50%; /* Center vertically */
-    left: 50%; /* Center horizontally */
+    top: 10%; /* Center vertically */
+    left: 10%; /* Center horizontally */
     transform: translate(-50%, -50%);
     background-color: rgba(255, 255, 255, 0.9);
-    padding: 20px;
+    padding: 0px;
     width: 80%;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.2);
     z-index: 1; /* Make it appear above other members */
@@ -181,27 +204,46 @@ body {
     transition: opacity 0.3s ease-in-out;
 }
 
-/* Apply styles to all members initially */
+/* Initially blur all members */
 .Eboard .member {
-    filter: none;
-}
-
-/* Blur members when hovering on an individual member */
-.Eboard .member:hover {
     filter: blur(3px);
     transition: filter 0.3s ease-in-out;
+}
+
+/* Clear the hovered member */
+.Eboard .member:hover {
+    filter: none; /* Clear the blur for the hovered member */
     z-index: 1; /* To ensure the hovered member is on top */
+}
+
+.intro-box{
+    background-image: url("../images/shanghai.png");
+    background-size: cover;
+    clip-path: polygon(0% 0%, 100% 0%, 100% 93%, 82% 93%, 75% 100%, 45% 94%, 0 93%);
+    opacity: 0.3;
 }
 
 /* Show the introduction box when hovering on a member */
 .Eboard .member:hover .intro-box {
     opacity: 1;
     transform: translateY(-50%);
+    display: block;
 }
 
 
 
 
+
+
+
+
+
+
+
+
+#-events{
+    /* navifating to events section of the page */
+}
 
 .events {
     background-color: aliceblue;
@@ -224,8 +266,9 @@ body {
     position: relative; /* Position relative for absolute positioning of overlay */
     height: 350px;
     width: 400px;
-    padding: 50px;
-    background-image: url("../images/event.png");
+    padding: 40px;
+    margin: 40px;
+    background-image: url('../images/event.png');
     background-size: cover;
     background-clip: border-box;
     box-shadow: 7px 7px 7px rgb(4, 0, 7);
@@ -264,14 +307,15 @@ body {
 } */
 
 .contact{
-    background-image: url("../images/mail.png");
+    background-color: rgb(189, 221, 248);
     background-size:cover;
     padding: 100px;
 }
 .emailus{
     padding: 30px;
-    background-color: rgb(34, 58, 119);
+    background-color: rgb(109, 141, 223);
     box-shadow: 10px 10px 10px rgb(243, 242, 247);
+    clip-path: ellipse(50% 80% at 50% 50%);
 }
 .emailus a{
     color: azure;
@@ -284,4 +328,56 @@ body {
     background-color: rgb(34,58,119);
     display: flex;
 
+}
+
+
+
+
+
+.notice{
+    margin-top: 80px;
+
+}
+
+
+
+
+
+
+
+#para{
+    padding: 30px;
+    background-color: rgb(34, 58, 119);
+    box-shadow: 10px 10px 10px rgb(243, 242, 247);
+} 
+
+
+
+.photo-event{
+    size: 0.4px;
+}
+
+#Company-visit-Adidas{
+    background-image: url('../images/Company-visit-Adidas.jpeg');
+    background-size: contain;
+}
+
+#Company-visit-Switching-Time{
+    background-image: url('../images/Company-visit-Switching-Time.png');
+    background-size: contain; 
+}
+
+#Company-visit-Hua-and-hua{
+    background-image: url('../images/Company-visit-Hua-and-hua.png');
+    background-size: contain; 
+}
+
+#Involvement-Fair{
+    background-image: url('../images/Involvement-Fair.png');
+    background-size: contain;  
+}
+
+
+.footnote{
+    margin-top: 100px;
 }
