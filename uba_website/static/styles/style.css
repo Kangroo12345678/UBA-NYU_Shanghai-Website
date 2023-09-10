@@ -115,7 +115,7 @@ body {
 
 .whatisinfo{
     display: flex;
-    gap: 300px
+    justify-content: space-between;
 }
 
 
@@ -206,13 +206,12 @@ body {
 
 /* Initially blur all members */
 .Eboard .member {
-    filter: blur(3px);
     transition: filter 0.3s ease-in-out;
 }
 
 /* Clear the hovered member */
-.Eboard .member:hover {
-    filter: none; /* Clear the blur for the hovered member */
+.Eboard:hover .member:not(:hover) {
+    filter: blur(3px); /* Clear the blur for the hovered member */
     z-index: 1; /* To ensure the hovered member is on top */
 }
 
@@ -355,6 +354,10 @@ body {
 
 .photo-event{
     size: 0.4px;
+}
+
+.cover-img {
+    width: 100%;
 }
 
 #Company-visit-Adidas{
